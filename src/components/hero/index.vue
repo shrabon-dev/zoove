@@ -1,0 +1,83 @@
+<template>
+  <section id="hero" :style="bgStyle">
+   <div class="overlay">
+    <v-container>
+      <v-row>
+        <v-col cols="6">
+          <h6> <span><GlSettings/></span> We Provide Electric Services For Industrial Project</h6>
+          <h2>We Are Professional Quality Services</h2>
+          <div class="btn">
+            <a href="#">Our Services</a>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+   </div>
+  </section>
+</template>
+
+<script>
+import banner from '../../assets/hero.png'
+import { GlSettings } from "@kalimahapps/vue-icons";
+
+export default {
+    name:'HeroSection',
+    components:{GlSettings},
+    data(){
+      return{
+        bgStyle:{
+          background:`url(${banner})`,
+          backgroundSize:'cover',
+          backgroundPosition:'center',
+          backgroundRepeat:'no-repeat',
+          width:'100%',
+        }
+      }
+    }
+}
+</script>
+
+<style scoped>
+  .overlay{
+    background: radial-gradient(circle,#000000 0%,#00000000 0%,#000000 70%);
+    padding: 200px 0;
+  }
+  h6{
+    font-family: var(--inter);
+    font-size: 18px;
+    font-weight: 500;
+    background: #ffffff50;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+    
+  }
+  h6 span{
+    color: var(--yellow);
+    padding-right: 10px;
+    padding-top: 2px;
+  }
+  h2{
+    font-family: var(--mulish);
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: #ffffff;
+    margin-top: 24px;
+    max-width: 700px;
+    
+  }
+  .btn a{
+    display: inline-block;
+    background: var(--yellow);
+    padding: 10px 20px;
+    font-family: var(--inter);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main);
+    margin-top: 34px;
+
+  }
+</style>
