@@ -3,7 +3,7 @@
    <div class="overlay">
     <v-container>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" sm="10" md="7">
           <h6> <span><GlSettings/></span> We Provide Electric Services For Industrial Project</h6>
           <h2>We Are Professional Quality Services</h2>
           <div class="btn">
@@ -80,4 +80,12 @@ export default {
     margin-top: 34px;
 
   }
+  @media (min-width:300px) and (max-width:600px){
+  .overlay{
+    padding: 60px 0;
+  }
+  h2{
+  font-size: 30px;
+  }
+}
 </style>

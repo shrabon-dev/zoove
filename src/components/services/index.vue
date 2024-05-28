@@ -7,8 +7,8 @@
             <p>Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt.</p>
         </div>
         <v-row justify="center" class="pt-10">
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -20,8 +20,8 @@
                     <a href="#">Read More...</a>
                 </div>
             </v-col>
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -33,8 +33,8 @@
                     <a href="#">Read More...</a>
                 </div>
             </v-col>
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -46,8 +46,8 @@
                     <a href="#">Read More...</a>
                 </div>
             </v-col>
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -59,8 +59,8 @@
                     <a href="#">Read More...</a>
                 </div>
             </v-col>
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -73,8 +73,8 @@
                     <a href="#">Read More...</a>
                 </div>
             </v-col>
-            <v-col cols="3">
-                <div class="srvce_card pa-10">
+            <v-col cols="12" sm="6" md="4" lg="4" xl="3">
+                <div class="srvce_card pa-5 pa-sm-5 pa-md-5 pa-lg-10">
                     <div class="srvce_img">
                         <!-- <picture>
                             <img :src="air" :alt="air">
@@ -175,5 +175,40 @@ export default {
     .srvce_img {
         font-size: 74px;
         color: var(--yellow);
+    }
+    @media (min-width:300px) and (max-width:600px) {
+    
+    .title h6{
+        font-family: var(--inter);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--main);
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .title h4{
+        font-size: 32px;
+    }
+    .title p{
+        font-size: 16px;
+    }
+    }
+    @media (min-width:960px) and (max-width:1280px) {
+     .srvce_card{
+        max-height: 400px;
+        min-height: 300px;
+     }
+     .srvce_card h5{
+        font-size: 20px;
+     }
+     .srvce_card p{
+        font-size: 16px;
+     }
+     .srvce_card a{
+        font-size: 16px;
+     }
     }
 </style>

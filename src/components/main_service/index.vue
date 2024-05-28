@@ -2,13 +2,13 @@
   <section id="main_service">
     <v-container>
         <v-row justify="center">
-            <v-col cols="8">
+            <v-col cols="12" sm="12" md="12" lg="8">
                 <div class="srvc_box">
                   <div class="title">
                     <h4>Professional Main Services</h4>
                     <p>Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt.</p>
                   </div>
-                    <v-card color="transparent mt-10" elevation="0">
+                    <v-card color="transparent mt-10 " elevation="0">
                       <v-tabs
                         v-model="tab"
                         align-tabs="center"
@@ -19,7 +19,7 @@
                       </v-tabs>
 
                       <v-tabs-window v-model="tab"
-                          class="bg-white mt-10 shadow pa-10 elevation-10">
+                          class="bg-white mt- pa-0 shadow pa-md-10 elevation-10">
                         <v-tabs-window-item
                           v-for="n in 3"
                           :key="n"
@@ -28,22 +28,22 @@
                         >
                           <v-container fluid>
                             <v-row>
-                             <v-col cols="6">
+                             <v-col cols="12" sm="6" md="6">
                               <h6> <span><FlFilledBuilding/></span>
                                 Based on Commercial
                               </h6>
                               <h4>Commercial</h4>
-                              <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                              <p class="pt-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
                               commodo consequat.</p>
-                                                            <p>
+                                                            <p >
                               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.ullamco laboris nisi ut aliquip ex ea 
                               commodo consequat.</p>
                               <div class="read_more">
                                 <a href="#">Read More</a>
                               </div>
                              </v-col>
-                             <v-col cols="6">
-                              <div class="img">
+                             <v-col cols="12" sm="6" md="6">
+                              <div class="img ">
                                 <picture>
                                   <img :src="imgOne" :alt="imgOne">
                                 </picture>
@@ -88,7 +88,7 @@ export default {
   }
   .srvc_box{
     position: relative;
-    top: 300px;
+    top: 250px;
  
   }
   .shadow{
@@ -173,5 +173,31 @@ export default {
     width: 100%;
     height: auto;
     display: block;
+  }
+  @media (min-width:300px) and (max-width:600px){
+  .title{
+    max-width: 688px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .title h4{
+    font-size: 32px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .shadow{
+    margin: 0px;
+    margin-top: 50px;
+  }
+  .active_tab,
+  .deactive_tab{
+    font-size: 16px;
+    padding: 10px;
+  }
+  .read_more a{
+    font-size: 16px;
+    padding: 10px 20px;
+  }
   }
 </style>
