@@ -22,6 +22,9 @@ export default {
 }
 </script>
 <style>
+  body{
+    overflow-x: hidden;
+  }
   a{
     text-decoration: none;
   }
