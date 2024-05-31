@@ -26,12 +26,17 @@
             </div>
             <div class="hdr_btm pt-5">
                 <v-row justify="between">
-                    <v-col order="2" order-sm="1">
+                    <v-col order="1" order-sm="1">
                         <!-- Logo Start -->
                         <div class="logo">
                             <picture>
                                 <img  class="" :src="logo" :alt="logo">
                             </picture>
+                        </div>
+                    </v-col>
+                    <v-col order="2" class="d-block d-md-none" >
+                        <div class="menu text-right">
+                            <span @click="sendMessage"><AnOutlinedMenu/></span>
                         </div>
                     </v-col>
                     <v-col order="1" order-sm="2" class="d-none d-sm-block">
@@ -80,16 +85,25 @@ import { CoBrandLinkedinIn } from "@kalimahapps/vue-icons";
 import logo from '../../assets/logo.png'
 import { ByMail } from "@kalimahapps/vue-icons";
 import { FePhoneCall } from "@kalimahapps/vue-icons";
+import { AnOutlinedMenu } from "@kalimahapps/vue-icons";
+import  EventBus  from  '../../eventBus';
 export default {
     name: 'HeaderSection',
     components: {
-        AkInstagramFill, FaBandsFacebookF, BsTwitterX, CoBrandLinkedinIn, ByMail, FePhoneCall
+        AkInstagramFill, FaBandsFacebookF, BsTwitterX, CoBrandLinkedinIn, ByMail, FePhoneCall,AnOutlinedMenu
     },
     data() {
         return {
             logo: logo,
+            menu:false,
         }
+    },
+    methods: {
+    sendMessage() {
+      this.menu = !this.menu
+      EventBus.emit('messageSent', this.menu);
     }
+    },
 }
 </script>
 

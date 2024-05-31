@@ -5,12 +5,16 @@
             <h6> <span><FeEdit/></span> Our Clients</h6>
             <h4>Our Trusted Big Clients!</h4>
         </div>
-        <v-row justify="center" class="pt-10">
-            <v-col cols="2"><div class="client_img"><picture><img :src="img" :alt="img"></picture></div></v-col>
-            <v-col cols="2"><div class="client_img"><picture><img :src="img2" :alt="img2"></picture></div></v-col>
-            <v-col cols="2"><div class="client_img"><picture><img :src="img3" :alt="img3"></picture></div></v-col>
-            <v-col cols="2"><div class="client_img"><picture><img :src="img4" :alt="img4"></picture></div></v-col>
-        </v-row>
+
+        <carousel v-bind="settings" :breakpoints="breakpoints">
+            <slide v-for="slide in slides" :key="slide">
+                <div class="client_img"><picture><img :src="slide.img" :alt="slide.img"></picture></div>
+            </slide>
+            <!-- <template #addons>
+            <navigation />
+            <pagination />
+            </template> -->
+        </carousel>
     </v-container>
   </section>
 </template>
@@ -21,15 +25,67 @@ import img from '../../assets/client/1.svg'
 import img2 from '../../assets/client/2.svg'
 import img3 from '../../assets/client/3.svg'
 import img4 from '../../assets/client/4.svg'
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide } from 'vue3-carousel'
 export default {
     name:'OurClient',
-    components:{FeEdit},
+    components:{FeEdit, Carousel,
+    Slide,},
     data(){
         return{
             img:img,
             img2:img2,
             img3:img3,
             img4:img4,
+            slides:[
+                {
+                    img:img,
+                },
+                {
+                    img:img2,
+                },
+                {
+                    img:img3,
+                },
+                {
+                    img:img,
+                },
+                {
+                    img:img2,
+                },
+                {
+                    img:img4,
+                },
+                {
+                    img:img3,
+                },
+                {
+                    img:img4,
+                },
+            ],
+            settings: {
+                itemsToShow: 4,
+                snapAlign: 'start',
+                },
+                // breakpoints are mobile first
+                // any settings not specified will fallback to the carousel settings
+                breakpoints: {
+                // 700px and up
+                300: {
+                    itemsToShow: 2,
+                    snapAlign: 'start',
+                },
+                // 700px and up
+                700: {
+                    itemsToShow: 2,
+                    snapAlign: 'start',
+                },
+                // 1024 and up
+                1024: {
+                    itemsToShow: 4,
+                    snapAlign: 'start',
+                },
+            },
         }
     }
 
@@ -61,5 +117,20 @@ export default {
         font-size: 45px;
         font-weight: 900;
         color: var(--main);
+    }
+
+    @media (min-width:300px) and (max-width:600px){
+        .title h4{
+        font-size: 24px;
+        }
+        .client_img{
+            width: 100%;
+
+        }
+        .client_img img{
+            width: 80%;
+            display: block;
+            margin-right: auto;
+        }
     }
 </style>

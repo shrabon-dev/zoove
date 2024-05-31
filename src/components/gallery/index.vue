@@ -1,13 +1,13 @@
 <template>
   <section id="gallery_sec" class=" py-16">
      <v-container>
-        <div class="title bg-white d-flex pa-3 mx-auto ga-2 justify-center align-center">
+        <div class="title bg-white d-flex pa-2 pa-sm-3 mx-auto ga-2 justify-center align-center">
             <span><FeEdit/></span>
             <h6>The Gallery</h6>
         </div>
         <h5  class="pt-5 pb-10">Check Our Recent Work </h5>
-        <v-row class="pt-10">
-            <v-col v-for="item in gallery" :key="item" cols="3">
+        <v-row class="pt-sm-10">
+            <v-col v-for="item in gallery" :key="item" cols="12" sm="6" md="3">
                 <div class="works">
                     <v-card class="pa-6">
                         <v-img
@@ -23,10 +23,7 @@
                     </v-card>
                 </div>
             </v-col>
-            <v-col cols="4">
-                
-            </v-col>
-            <v-col cols="4"></v-col>
+      
         </v-row>
      </v-container>
   </section>
@@ -63,7 +60,8 @@ export default {
                     img:image4,
                     title:'Electrical installation',
                     subTitle:'Instalation',
-                },
+                
+                }
             ]
         }
     }
@@ -109,5 +107,24 @@ export default {
     font-size: 18px;
     color: var(--sub);
     text-align: center;
+ }
+ @media (min-width:300px) and (max-width:600px){
+   .wrk_info h4{
+    font-size: 20px;
+   }
+   .wrk_info p{
+    font-size: 14px;
+   }
+   h5{
+    font-size: 24px;
+   }
+ }
+ @media (min-width:960px) and (max-width:1280px){
+   .wrk_info h4{
+    font-size: 18px;
+   }
+   .wrk_info p{
+    font-size: 14px;
+   }
  }
 </style>

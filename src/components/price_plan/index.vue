@@ -2,22 +2,22 @@
   <section id="price_plan">
     <v-container>
         <v-row>
-            <v-col cols="8" class="mx-auto">
+            <v-col cols="12" sm="12" md="12" lg="8" xl="8" class="mx-auto">
                 <div class="title">
                     <h6> <span><FeEdit/></span> Price and Plan</h6>
-                    <div class="d-flex">
+                    <div class="d-sm-flex">
 
-                        <h4 class="w-50">Let’s Customize Work With Affordable Price</h4>
-                        <p class="w-50">Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt. Interdum et malesuada.</p>
+                        <h4 class="w-sm-50">Let’s Customize Work With Affordable Price</h4>
+                        <p class="w-sm-50">Pellentesque vehicula eros neque, maximus mattis est sagittis Nulla facilisi. In sed pretium metus. Proin pretium id urna sit amet tincidunt. Interdum et malesuada.</p>
                     </div>
                 </div>
-                <v-row>
-                    <v-col cols="4">
-                        <div class="plan pa-8">
+                <v-row justify="center">
+                    <v-col cols="12" sm="6" md="4">
+                        <div class="plan pa-lg-1 pa-xl-8">
                             <div class="price d-flex justify-between align-center">
                                 <div class="w-50">
                                     <span>Basic Plan</span>
-                                    <h2>$ 599.00</h2>
+                                    <h2>$599.00</h2>
                                 </div>
                                 <div class="w-50">
                                     <h6>Per Visit Charge</h6>
@@ -40,12 +40,12 @@
                             </div>
                         </div>
                     </v-col>
-                    <v-col cols="4">
-                           <div class="plan standard pa-8">
+                    <v-col cols="12" sm="6" md="4">
+                           <div class="plan standard pa-lg-1 pa-xl-8">
                             <div class="price d-flex justify-between align-center">
                                 <div class="w-50">
                                     <span>Standard</span>
-                                    <h2>$ 999.00</h2>
+                                    <h2>$999.00</h2>
                                 </div>
                                 <div class="w-50">
                                     <h6>Per Visit Charge</h6>
@@ -68,12 +68,12 @@
                             </div>
                         </div>
                     </v-col>
-                    <v-col cols="4">
-                           <div class="plan pa-8">
+                    <v-col cols="12" sm="6" md="4">
+                           <div class="plan pa-lg-1 pa-xl-8">
                             <div class="price d-flex justify-between align-center">
                                 <div class="w-50">
                                     <span>Professional</span>
-                                    <h2>$ 1999.00</h2>
+                                    <h2>$1299.00</h2>
                                 </div>
                                 <div class="w-50">
                                     <h6>Per Visit Charge</h6>
@@ -199,5 +199,41 @@ export default {
     .standard button{
         background: transparent;
         color: var(--yellow);
+    }
+    @media (min-width:300px) and (max-width:600px){
+        .title h6{
+            font-size: 18px;
+        }
+        .title h4{
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+        .title p{
+            font-size: 14px;
+        }
+    }
+    @media (min-width:1280px) and (max-width:1499px){
+        .title h6{
+            font-size: 18px;
+        }
+        .title h4{
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+        .title p{
+            font-size: 14px;
+        }
+        .plan_info li{
+            font-size: 14px;
+        }
+        .price h2{
+            font-size: 24px;
+        }
+        .price span{
+            font-size: 16px;
+        }
+        .price h6{
+            font-size: 14px;
+        }
     }
 </style>

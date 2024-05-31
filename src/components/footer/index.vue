@@ -3,14 +3,14 @@
     <v-container>
       <!-- Footer Top Info Start -->
       <v-row>
-        <v-col cols="6">
+        <v-col cols="12" sm="12" md="12" lg="3" xl="6">
           <div class="logo">
             <picture>
               <img :src="logo" :alt="logo">
             </picture>
           </div>
         </v-col>
-        <v-col cols="2">
+        <v-col cols="12" sm="4" md="4" lg="3" xl="2">
             <div class="d-flex ga-4">
                 <div class="icon">
                     <span>
@@ -24,7 +24,7 @@
 
             </div>
         </v-col>
-        <v-col cols="2">
+        <v-col cols="12" sm="4" md="4" lg="3" xl="2">
             <div class="d-flex ga-4">
                 <div class="icon">
                     <span>
@@ -38,7 +38,7 @@
 
             </div>
         </v-col>
-        <v-col cols="2">
+        <v-col cols="12" sm="4" md="4" lg="3" xl="2">
             <div class="d-flex ga-4">
                 <div class="icon">
                     <span>
@@ -57,8 +57,8 @@
       <!-- Footer Top Info End -->
       <!-- Footer Bootom Info Start -->
       <div class="ftr_btm">
-        <v-row>
-        <v-col cols="5">
+      <v-row>
+        <v-col cols="12" sm="12" md="5">
          <div class="ftr_dtls">
           <p>Denouncing pleasure and praising pain was born and I will givg you a coghmplete acchount of the system, and expound the actual</p>
            <div class="icons">
@@ -69,9 +69,9 @@
            </div>
          </div>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="12" sm="8" md="4">
           <div class="ftr_links">
-          <div class="d-flex">
+          <div class="d-sm-flex ">
             <div class="link">
             <h5>Explore</h5>
             <ul>
@@ -95,7 +95,7 @@
            </div>
          </div>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="12" sm="4" md="3">
           <div class="link">
             <h5>Uitility Pages</h5>
             <ul>
@@ -111,7 +111,7 @@
       </div>
       <!-- Footer Bootom Info End -->
       <div class="copyright">
-        <p>Copyright © BlueCollar | Designed by VictorFlow Templates - Powered by Webflow</p>
+        <p>Copyright © Zoove | Designed by VictorFlow Templates - Powered by Vuex</p>
       </div>
     </v-container>
   </footer>
@@ -187,7 +187,6 @@ export default {
     .ftr_links{
       border-left: 1px solid #4B557D;
       border-right: 1px solid #4B557D;
-
     }
     ul li a{
       font-family: var(--inter);
@@ -221,5 +220,25 @@ export default {
     }
     .copyright{
       text-align: center;
+    }
+    @media (min-width:300px) and (max-width:600px) {
+        .link{
+          padding-left: 0px;
+          margin-bottom: 20px;
+        }
+        .ftr_links{
+          border-left: none;
+          border-right: none;
+        }
+    }
+    @media (min-width:601px) and (max-width:960px) {
+        .link{
+          padding-left: 60px;
+        } 
+    }
+    @media (min-width:961px) and (max-width:1280px) {
+        .link{
+          padding-left: 20px;
+        } 
     }
 </style>

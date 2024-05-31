@@ -1,7 +1,7 @@
 <template>
   <section>
         <v-row align="center" class="gap-10">
-            <v-col cols="6">
+            <v-col cols="12" md="6">
                 <div class="why_choose_img" :style="bgStyle">
                     <div class="info pa-10">
                         <div class="list">
@@ -15,8 +15,8 @@
                     </div>
                 </div>
             </v-col>
-            <v-col cols="6">
-                <div class="why_choose_details pl-10">
+            <v-col cols="12" md="6">
+                <div class="why_choose_details pl-4 pl-sm-10">
                     <div class="title">
                         <span><FeEdit/></span>
                         <h6>Why Choose Us </h6>
@@ -178,5 +178,58 @@ export default {
         align-items: start;
         align-content: start;
     }
-
+    @media (min-width:300px) and (max-width:600px) {
+        .why_choose_img{
+            padding: 50px 0;
+        }
+        .why_choose_img .info{
+            padding: 20px !important;
+        }
+        .list ul li{
+            font-size: 16px;
+        }
+        .list ul li span:nth-child(1){
+        font-size: 14px;
+        width: 60px;
+        }
+        .list ul li span:nth-child(2){
+            width: 200px;
+        }
+        h4{
+            font-size: 32px;
+            max-width: 90%;
+        }
+        p{
+            font-size: 14px;
+            max-width: 90%;
+        }
+        .card_list span{
+            width: 24px !important;
+            height: 24px !important;
+            font-size: 20px;
+            padding: 2px;
+        }
+    }
+    @media (min-width:601px) and (max-width:960px) {
+        h4{
+            max-width: 90%;
+        }
+        p{
+            max-width: 90%;
+        }
+    }
+    @media (min-width:961px) and (max-width:1280px) {
+        h4{
+            max-width: 90%;
+        }
+        p{
+            max-width: 90%;
+        }
+        .why_choose_img{
+            padding: 160px 0;
+        }
+        .why_choose_img .info{
+            padding: 100px 50px !important;
+        }
+    }
 </style>

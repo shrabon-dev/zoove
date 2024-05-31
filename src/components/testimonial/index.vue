@@ -1,9 +1,8 @@
 <template>
   <section id="testimonial">
     <v-container>
-        <v-row>
-            <v-col cols="2"></v-col>
-             <v-col cols="4">
+        <v-row justify="center">
+             <v-col cols="12" sm="6" md="6" lg="4">
                 <!-- Title Start -->
                 <div class="title">
                     <span>
@@ -60,7 +59,7 @@
                 </div>
                 <!-- Any Question End -->
              </v-col>
-             <v-col cols="4">
+             <v-col cols="12" sm="6" md="6" lg="4">
                 <!-- Title Start -->
                 <div class="title pb-0 mb-0">
                     <span>
@@ -72,14 +71,14 @@
                 <!-- Feedback Start -->
                     <h3>Appointment Form</h3>
                    <!-- Form Input -->
-                   <div class="form pa-10">
+                   <div class="form pt-5  pa-md-10">
                     <form action="" method="post">
                       <input type="text" placeholder="Your Name">
                       <input type="text" placeholder="Email Address">
                       <input type="text" placeholder="Phone Number">
                       <input type="text" placeholder="Date">
                       <textarea name="" id="" cols="30" rows="10" placeholder="Service Description"></textarea>
-                      <v-btn class="bg py-4" :height="60" :width='`100%`'>Submit</v-btn>
+                      <v-btn class="bg  " :height="60"  :width='`100%`'>Submit</v-btn>
                    </form>
                    </div>
 
@@ -265,6 +264,17 @@ export default {
         font-size: 18px;
         line-height: 40px;
         margin-top: 5px;
-
+    }
+    @media (min-width:300px) and (max-width:600px) {
+        .qoute{
+            top: 50px;
+            right: 50px;
+        }
+        .any_question h5{
+            font-size: 18px;
+        }
+        h3{
+        font-size: 24px;
+    }
     }
 </style>

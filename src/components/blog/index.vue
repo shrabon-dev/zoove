@@ -6,18 +6,17 @@
             <h4>Latest News and Articles</h4>
         </div>
         <v-row justify="center">
-
-            <v-col cols="4">
+            <v-col cols="12" sm="6" md="6" lg="4" >
                 <div class="blog">
                     <div class="blg_img">
                         <picture>
                             <img :src="img" :alt="img">
                         </picture>
                        <div class="blg_dtls d-flex justify-center align-center">
-                        <div class="created_by d-flex align-center align-content-center ga-3 pa-5">
+                        <div class="created_by d-flex align-center align-content-center ga-3 pa-2 pa-md-5">
                            <span> <BxSolidUser/></span> Muhammad Ali
                         </div>
-                        <div class="date d-flex align-center align-content-center ga-3 pa-5">
+                        <div class="date d-flex align-center align-content-center ga-3 pa-2 pa-md-5">
                            <span> <HeOutlineIScheduleSchoolDateTime/></span> 19 April 24
                         </div>
                        </div>
@@ -29,17 +28,17 @@
                     </div>
                 </div>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" sm="6" md="6" lg="4">
                 <div class="blog">
                     <div class="blg_img">
                         <picture>
                             <img :src="img2" :alt="img2">
                         </picture>
                        <div class="blg_dtls d-flex justify-center align-center">
-                        <div class="created_by d-flex align-center align-content-center ga-3 pa-5">
+                        <div class="created_by d-flex align-center align-content-center ga-3 pa-2 pa-md-5">
                            <span> <BxSolidUser/></span> Muhammad Ali
                         </div>
-                        <div class="date d-flex align-center align-content-center ga-3 pa-5">
+                        <div class="date d-flex align-center align-content-center ga-3 pa-2 pa-md-5">
                            <span> <HeOutlineIScheduleSchoolDateTime/></span> 19 April 24
                         </div>
                        </div>
@@ -123,14 +122,11 @@ export default {
         color: var(--main);
         background: var(--yellow);
         width: 200px;
-      
-
     }
     .blg_dtls{
         position: absolute;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-
     }
     .created_by span,.date span{
         display: inline-flex;
@@ -164,7 +160,28 @@ export default {
         padding-top: 10px;
     }
     .blg_info a svg{
-        display: inline-flex;
-        
+        display: inline-flex;   
+    }
+    @media (min-width:300px) and (max-width:600px) {
+        .created_by,.date{
+            font-size: 10px;
+            width: 120px;
+        }
+        .blg_info h5{
+            font-size: 22px;
+            padding: 20px 0 10px 0;
+        }
+        .blg_info p{
+            font-size: 14px;
+        }
+        .blg_info a{
+            font-size: 14px;
+        }
+        .title h4{
+            font-size: 24px;
+        }
+        .title p{
+            font-size: 14px;
+        }
     }
 </style>

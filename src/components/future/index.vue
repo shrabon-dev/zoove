@@ -2,14 +2,14 @@
   <section id="future_sec">
     <v-container>
         <v-row justify="center">
-            <v-col cols="12" sm="6" md="5" lg="4">
+            <v-col order="1" order-sm="2" order-md="1" cols="12"  md="5" lg="4">
                 <div class="ftr_img">
                     <picture>
                         <img :src="img" :alt="img">
                     </picture>
                 </div>
             </v-col>
-            <v-col cols="12" sm="6" md="7" lg="4">
+            <v-col order="2" order-sm="1" order-md="2" cols="12"  md="7" lg="5">
                 <div class="ftr_detls">
                     <h6>
                         <img :src="slogo" :alt="slogo"> Welcome Zoova
