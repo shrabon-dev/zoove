@@ -150,7 +150,10 @@ h6 {
 
 @media (min-width:300px) and (max-width:600px) {
     p {
-        font-size: 9px;
+        font-size: 10px;
+    }
+    p span{
+        display: block;
     }
 
    
