@@ -2,7 +2,7 @@
     <header class="">
         <v-container>
             <div class="hdr_top">
-                <v-row justify="justify-space-between">
+                <v-row justify="justify-space-between" align="center">
                     <v-col cols="6">
                         <p class="">Opening Hours: <span>06:00 to 20:00</span></p>
                     </v-col>
@@ -150,12 +150,10 @@ h6 {
 
 @media (min-width:300px) and (max-width:600px) {
     p {
-        font-size: 12px;
+        font-size: 9px;
     }
 
-    /* p span {
-        display: block;
-    } */
+   
 
     a {
         font-size: 14px;
