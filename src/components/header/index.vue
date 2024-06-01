@@ -26,7 +26,7 @@
             </div>
             <div class="hdr_btm pt-5">
                 <v-row justify="between">
-                    <v-col order="1" order-sm="1">
+                    <v-col sm="4" md="4" lg="5" order="1" order-sm="1">
                         <!-- Logo Start -->
                         <div class="logo">
                             <picture>
@@ -34,15 +34,15 @@
                             </picture>
                         </div>
                     </v-col>
-                    <v-col order="2" class="d-block d-md-none" >
+                    <v-col order="2" class="d-block d-sm-none" >
                         <div class="menu text-right">
                             <span @click="sendMessage"><AnOutlinedMenu/></span>
                         </div>
                     </v-col>
-                    <v-col order="1" order-sm="2" class="d-none d-sm-block">
+                    <v-col sm="8" md="8" lg="7" order="1" order-sm="2" class="d-none d-sm-block ">
                         <!-- Icons Start -->
-                        <div class="d-flex justify-end ga-2 ga-sm-10">
-                            <div class="w-50">
+                        <div class="d-flex justify-end ga-2 ga-sm-3 ga-md-10">
+                            <div class="w-50 w-lg-33 w-xl-33">
                                 <div class="d-flex ga-4">
                                     <div class="icon">
                                         <span>
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-50">
+                            <div class="w-50 w-lg-50 w-xl-33">
                                 <div class="d-flex ga-4">
                                     <div class="icon">
                                         <span>

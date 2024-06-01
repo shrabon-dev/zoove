@@ -4,17 +4,7 @@
   <section id="hero" :style="bgStyle">
    <div class="overlay">
     <v-container>
-      <!-- <v-row>
-        <v-col cols="12" sm="10" md="7">
-          <h6> <span><GlSettings/></span> We Provide Electric Services For Industrial Project</h6>
-          <h2>We Are Professional Quality Services</h2>
-          <div class="btn">
-            <a href="#">Our Services</a>
-          </div>
-        </v-col>
 
-      </v-row> -->
-    
           <div class="hr_info text-left">
             <h6> <span><GlSettings/></span> We Provide Electric Services For Industrial Project</h6>
             <h2>We Are Professional Quality Services</h2>

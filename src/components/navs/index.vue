@@ -1,10 +1,10 @@
 <template>
   <nav :class="[menu ?'mble-menu-active':'mble-menu-deactive']">
     <v-container class="bg pa-0">
-          <div  class="d-md-flex pa-0 justify-space-between align-center">
-            <v-col cols="12" md="10" class="">
+          <div  class="d-sm-flex pa-0 justify-space-between align-center">
+            <v-col cols="12" sm="9" md="9" lg="9" xl="10" class="">
               <!-- Menu Bar Start -->
-              <ul class="d-md-flex justify-end ga-10">
+              <ul class="d-sm-flex justify-end ga-10">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Pages</a></li>
@@ -14,7 +14,7 @@
               </ul>
               <!-- Menu Bar End -->
             </v-col>
-            <v-col cols="12" md="2" class="text-md-right ">
+            <v-col cols="12" sm="3" md="3" lg="3" xl="2" class="text-md-right ">
               <!-- Button Start -->
               <a class="btn" href="#">Have Any Questions?</a>
               <!-- Button End -->
@@ -97,5 +97,28 @@ export default {
     opacity: 1;
     transition: height 0.4s ease-in-out;
   }
+  }
+  @media (min-width:601px) and (max-width:960px) {
+    ul li a{
+      font-size: 14px;
+    }
+    .btn{
+      font-size: 14px;
+      padding: 10px 10px;
+    }
+    
+  }
+  @media (min-width:961px) and (max-width:1279px) {
+    nav{
+      bottom: -30px;
+    }
+    ul li a{
+      font-size: 14px;
+    }
+    .btn{
+      font-size: 14px;
+      padding: 10px 10px;
+    }
+    
   }
 </style>
