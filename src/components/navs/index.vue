@@ -71,6 +71,28 @@ export default {
     font-weight: 500;
     background: var(--main) !important;
     padding: 20px 20px;
+    transition: .4s all ease-in-out;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn::after{
+    position: absolute;
+    top: 15%;
+    left: -100%;
+    background: transparent;
+    box-shadow: 0 0 20px 0 #000000;
+    width: 50px;
+    height: 50px;
+    content: '';
+    transform: rotate(45deg) translate(-50%,50%);
+    transition: .4s all ease-in-out;
+  }
+  .btn:hover{
+    background: #000000 !important;
+  }
+  .btn:hover:after{
+    background: var(--yellow);
+    left: -2%;
   }
   @media (min-width:300px) and (max-width:600px) {
     ul li a{

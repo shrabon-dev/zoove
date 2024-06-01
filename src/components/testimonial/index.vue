@@ -78,7 +78,7 @@
                       <input type="text" placeholder="Phone Number">
                       <input type="text" placeholder="Date">
                       <textarea name="" id="" cols="30" rows="10" placeholder="Service Description"></textarea>
-                      <v-btn class="bg  " :height="60"  :width='`100%`'>Submit</v-btn>
+                      <button class="bg  btn" :height="60"  :width='`100%`'>Submit</button>
                    </form>
                    </div>
 
@@ -264,6 +264,34 @@ export default {
         font-size: 18px;
         line-height: 40px;
         margin-top: 5px;
+    }
+    .btn{
+        width: 100%;
+        padding: 20px 0;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        transition: .4s all ease-in-out;
+    }
+    .btn::after{
+        position: absolute;
+        top: 15%;
+        left: -100%;
+        background: #dbdbdb;
+        box-shadow: 0 0 20px 0 #000000;
+        width: 50px;
+        height: 50px;
+        content: '';
+        transform: rotate(45deg) translate(-50%,50%);
+        transition: .4s all ease-in-out;
+    }
+    .btn:hover{
+        background: #000000 !important;
+        color: #ffffff;
+    }
+    .btn:hover:after{
+        background: var(--yellow);
+        left: 2%;
     }
     @media (min-width:300px) and (max-width:600px) {
         .qoute{

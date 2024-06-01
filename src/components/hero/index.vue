@@ -1,5 +1,5 @@
 <template>
-    <Carousel :autoplay="2000" v-bind="settings">
+    <Carousel :autoplay="4000" v-bind="settings">
         <Slide v-for="slide in 10" :key="slide">
   <section id="hero" :style="bgStyle">
    <div class="overlay">
@@ -91,7 +91,29 @@ export default {
     font-weight: 500;
     color: var(--main);
     margin-top: 34px;
-
+    transition: .4s all ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn a::after{
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    background: transparent;
+    box-shadow: 0 0 20px 0 #000000;
+    width: 50px;
+    height: 50px;
+    content: '';
+    transform: rotate(45deg) translate(-50%,50%);
+    transition: .4s all ease-in-out;
+  }
+  .btn a:hover{
+    background: var(--main) !important;
+    color: var(--yellow)
+  }
+  .btn a:hover:after{
+    background: var(--yellow);
+    left: -2%;
   }
   @media (min-width:300px) and (max-width:600px){
   .overlay{
